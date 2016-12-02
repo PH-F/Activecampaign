@@ -1,0 +1,17 @@
+{
+    "name": "phf/activecampaign",
+    "description": "Package to connect to the ActiveCampaign 5 api",
+    "authors": [
+        {
+            "name": "Patrick Houtman",
+            "email": "info@ph-f.nl"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Phf\\Activecampaign\\": "src"
+        }
+    }
+}
