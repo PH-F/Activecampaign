@@ -130,6 +130,10 @@ class ActivecampaignManager implements ActivecampaignInterface
 
         $xml = (array)simplexml_load_string($response, "SimpleXMLElement", LIBXML_NOCDATA);
 
-        return empty($xml) ? "FAILED" : $xml['row'];
-    }
+        $lists = [];
+        foreach ($xml['row'] as $item){
+            $lists[$item->id->__toString()] = $item->name->__toString();
+        }
+
+        return empty($xml) ? "FAILED" : $lists;    }
 }
